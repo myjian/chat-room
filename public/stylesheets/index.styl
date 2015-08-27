@@ -1,0 +1,54 @@
+msg_input_height = 120px
+
+#modal_name label[for="name_input"]
+	left 0
+
+#messages 
+	list-style-type none
+	margin-bottom msg_input_height+10
+
+#messages li div 
+	margin-bottom 5px
+	padding 5px 10px
+	border-radius 5px
+	background-color #f5f5f5
+
+#messages li div.me
+	background #c7defe
+ 
+#messages li div h5
+	font-size 1.4rem
+
+#messages li div h5 small
+	font-size 65%
+
+form.msg_input
+	background-color white
+	text-align center
+	position fixed
+	bottom 0
+
+form.msg_input .row, form.msg_input .row .col
+	margin-top 0
+	margin-bottom @margin-top
+
+form.msg_input div.msg_input
+	border-top-left-radius 5px
+	border-top-right-radius @border-top-left-radius
+	background-color #c6e7f8
+	padding-left 10px
+	padding-right @padding-left
+
+form.msg_input div.msg_input textarea#m
+	border-style none
+	box-shadow none
+	padding-top 10px
+	padding-bottom @padding-top
+	margin-bottom 0
+
+#msg_send
+	border-bottom-left-radius 5px
+	border-bottom-right-radius @border-bottom-left-radius
+	padding-top 10px
+	padding-bottom @padding-top
+	background-color #e3e3e3

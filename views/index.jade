@@ -1,0 +1,40 @@
+doctype html
+html
+	head
+		title #{title} - FSE Chat Room
+		link(type="text/css" rel="stylesheet" href="/stylesheets/materialize.min.css"
+			 media='screen,projection')
+		link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+		link(type="text/css" rel="stylesheet" href="/stylesheets/index.css")
+		// Let browser know website is optimized for mobile
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+	body
+		div#modal_name.modal(title="")
+			form
+				div.modal-content
+					h4 Welcome to FSE Chat Room
+					p Please input your name:
+						input#name_input.validate(type="text" name="name"
+							placeholder="Name" required)
+				div.modal-footer
+					a#name_submit.modal-action.waves-effect.waves-light.btn(href="#!") Enter Chat Room
+					// Allow form submission with keyboard without duplicating the dialog button
+					// input(type="submit" tabindex="-1" style="position:absolute; top:-1000px")
+
+		div.container
+			ul#messages.row
+			form.msg_input(action="").container
+				input#name(type="hidden" value="myjian@jade")
+				div.row
+					div.col.s12
+						div.msg_input
+							textarea#m.materialize-textarea
+					div.col.s12
+						div#msg_send
+							button.btn.blue.waves-effect.waves-light(type="submit") Post
+								i.material-icons.right send
+
+		script(type="text/javascript" src="/javascripts/jquery-1.11.3.min.js")
+		script(type="text/javascript" src="/socket.io/socket.io.js")
+		script(type="text/javascript" src="/javascripts/materialize.min.js")
+		script(type="text/javascript" src="/javascripts/index.js")
