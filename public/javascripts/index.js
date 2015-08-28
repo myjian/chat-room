@@ -25,8 +25,8 @@ $(document).ready(function() {
 		event.preventDefault();
 		adduser();
 	});
-	//$('#modal_name').openModal({ dismissible: false });
-	//$('#name_input').focus();
+	$('#modal_name').openModal({ dismissible: false });
+	$('#name_input').focus();
 
 	/* RealTime Communication */
 	function outputMsg(msgObj, isMe){
